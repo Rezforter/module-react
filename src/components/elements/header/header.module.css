@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+.header {
+  background-color: #161516;
+  color: #fff;
+  padding-top: 48px;
+  padding-bottom: 80px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1302px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
+}
+
+.header__goods {
+  margin-right: 20px;
+  text-align: end;
+  
+}
+
