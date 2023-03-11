@@ -1,13 +1,10 @@
-import style from './header.module.css'
-import { cardAdd } from '../card';
+import { Link } from 'react-router-dom';
+import style from './header.module.css';
 
-let productCount = 3;
-let productPrice = 3500;
-
-
-function Header() {
-  return (
-    <header className={style['header']}>
+function Header({productCount = 0, productPrice = 0}) {
+ 
+ return (
+   <header className={style['header']}>
       <div className={style['container']}>
         <h1 className={style['header__title']}>НАША ПРОДУКЦИЯ</h1>
         <div className={style['header__cart']}>
@@ -19,10 +16,9 @@ function Header() {
               на сумму {productPrice} ₽
             </p>
           </div>
-
-          <div className={style['header__img']}>
-            <img src="./img/Group 71.svg" alt="photo" />
-          </div>
+          <Link className={style['header__img-container']} to={'/basket'}>
+            <img className={style['header__img']} src="./img/Group 71.svg" alt="photo" />
+          </Link>
         </div>
       </div>
     </header>

@@ -8,13 +8,18 @@
   color: white;
   border: 1px solid #D58C51;
   padding: 43px 27px 32px 21px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .card__title {
   font-size: 17px;
   line-height: 21px;
   font-weight: 500;
-  margin-top: 31px;
+  margin-top: 28px;
 }
 
 .card__description {
@@ -28,9 +33,21 @@
   display: flex;
   width: inherit;
   justify-content: space-between;
-  bottom: 0;
   align-items: center;
-  margin-top: 31px;
+  bottom: 0;
+  margin-top: 23px;
+}
+
+.card__price-weight {
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+.card__price-weight span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .card:hover {
