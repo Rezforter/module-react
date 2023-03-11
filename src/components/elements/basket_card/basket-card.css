@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 31px;
 }
 
 .basket__meal-name {
@@ -32,4 +33,13 @@
   font-weight: 500;
   font-size: 17px;
   line-height: 21px;
+  width: 500px;
+}
+
+.basket__xmark {
+  border-radius: 50%;
+}
+
+.basket__xmark:hover {
+  background-color: #724d2e;
 }

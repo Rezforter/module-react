@@ -17,3 +17,15 @@
   position: absolute;
   left: 0;
 }
+
+.basket__back-img {
+  border-radius: 50%;
+}
+
+.basket__back-img:hover {
+  background-color: #724d2e;
+}
+
+.basket__title {
+  margin-left: 10px;
+}

@@ -1,7 +1,5 @@
 import './basket-card.css'
 
-let price = 2000;
-
 function Basket_card({id, url, title, price}) {
   console.log();
   return (
@@ -18,8 +16,8 @@ function Basket_card({id, url, title, price}) {
         <div className='basket__price'>
           {price} ₽
         </div>
-        <div className='basket__xmark'>
-          <img src="./img/xMark.svg" alt="xmark" />
+        <div className='basket__xmark-container'>
+          <img className='basket__xmark' src="./img/xMark.svg" alt="xmark" />
         </div>
       </div>
     </div>

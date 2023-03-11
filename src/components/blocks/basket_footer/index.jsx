@@ -1,6 +1,9 @@
+import { basket_products } from '../basket_main/basket_product';
 import style from './basket_footer.module.css'
 
-let price = 1110;
+let price = basket_products.reduce((acc, item) => {
+  return acc + item.price;
+}, 0);
 function Basket_footer() {
   return (
   <footer className={style['basket__footer']}>

@@ -3,12 +3,12 @@
 }
 
 .basket__container {
+  font-family: 'Montserrat';
+  font-style: normal;
   width: 860px;
   margin: 0 auto;
   height: calc(100vh - 222px);
   overflow-x: hidden;
-  font-family: 'Montserrat';
-  /* margin-left: 10px; */
   padding-right: 5px;
 }
 
