@@ -1,5 +1,4 @@
 import style from './header.module.css'
-import { cardAdd } from '../card';
 
 let productCount = 3;
 let productPrice = 3500;

@@ -1,0 +1,19 @@
+.basket__container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 860px;
+  margin: 0 auto;
+  padding-top: 53px;
+  padding-bottom: 38px;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.basket__back {
+  position: absolute;
+  left: 0;
+}

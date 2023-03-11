@@ -5,7 +5,7 @@
   overflow-x: hidden;
  }
  
- .main::-webkit-scrollbar {
+.main::-webkit-scrollbar {
   width: 30px;
 }
 

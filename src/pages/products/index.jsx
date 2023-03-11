@@ -1,27 +1,13 @@
-/* import Card from './components/elements/card' */
-import Card from '../../components/elements/card'
-import style from './products.module.css'
-import { products } from '../../products.js';
+import Header from "../../components/blocks/products_header";
+import Products from "../../components/blocks/products_main";
 
-function Products() {
+function Pageproducts () {
   return (
-    <main className={style['main']}>
-      <div className={style['container']}>
-        {products.map(item => {
-          return (
-            <Card 
-              key={item.id}
-              url={item.url}
-              title={item.title}
-              description={item.description}
-              price={item.price}
-              weight={item.weight}
-            />
-          )
-        })}
-      </div>
-    </main>
+    <div className="page">
+      <Header />
+      <Products />
+    </div>
   )
 }
 
-export default Products;
+export default Pageproducts;

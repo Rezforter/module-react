@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/elements/header'
-import Products from './pages/products';
+import Pageproducts from './pages/products';
+import Basket from './pages/basket';
 
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <Products />
+      {/* {<Pageproducts />} */}
+      {<Basket />}
     </div>
   );
 }

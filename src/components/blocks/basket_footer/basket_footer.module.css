@@ -1,0 +1,26 @@
+.basket__footer {
+  border-top: 2px solid #D58C51;
+}
+
+.basket__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 860px;
+  margin: 20px auto 0 auto;
+  
+}
+
+.basket__order-price {
+  color: white;
+  text-transform: uppercase;
+}
+
+.basket__order-price span {
+  color: #D58C51;
+}
+
+.basket__button {
+  background-color: #D58C51;
+  padding: 12px 40px;
+}
