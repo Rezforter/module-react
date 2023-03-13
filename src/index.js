@@ -4,17 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Pageproducts from './pages/products';
+import Products from './pages/products';
 import Basket from './pages/basket';
-
-// если нужно убрать левый скролл, т.к. он "не соответствует макету"
-// то я его уберу в финальной работе, как по мне он красиво выглядит
-// и вписывается в дизайн страницы
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Pageproducts />
+    element: <Products />
   },
   {
     path: '/basket',
@@ -22,11 +18,12 @@ const router = createBrowserRouter([
   }
 ])
 
+// Закомментировать RouterProvider и заменить в basket-header Link на div для соответствия требованиям текущему ДЗ
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router}/>
-    {/* <App /> */}
+    {/* {<App />} */}
   </React.StrictMode>
 );
 

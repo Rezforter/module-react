@@ -1,4 +1,4 @@
-export const basket_products = [
+export const BasketProducts = [
   {
     id: 1,
     url: './img/products/1.png',

@@ -38,6 +38,7 @@
 
 .basket__xmark {
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .basket__xmark:hover {
