@@ -1,14 +1,14 @@
-import style from './basket_main.module.css'
-import Basket_card from '../../elements/basket_card';
-import { basket_products } from './basket_product';
+import style from './basket-main.module.css'
+import BasketCard from '../../elements/basket-card';
+import { BasketProducts } from './basket-product';
 
-function Basket_main() {
+function BasketMain() {
   return (
   <main className={style['basket__main']}>
     <div className={style['basket__container']}>
-      {basket_products.map(item => {
+      {BasketProducts.map(item => {
           return (
-            <Basket_card 
+            <BasketCard 
               key={item.id}
               url={item.url}
               title={item.title}
@@ -21,4 +21,4 @@ function Basket_main() {
   )
 }
 
-export default Basket_main;
+export default BasketMain;

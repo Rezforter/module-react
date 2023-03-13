@@ -4,7 +4,7 @@ import style from './products.module.css'
 import { products } from './products.js';
 
 
-function Products({handleState}) {
+function ProductsMain({handleState}) {
   
   const changeState = (price) => {
     handleState(prevcount => prevcount + 1, prevprice => prevprice + price);
@@ -31,4 +31,4 @@ function Products({handleState}) {
   )
 }
 
-export default Products;
+export default ProductsMain;

@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
-import style from './basket_header.module.css'
+import style from './basket-header.module.css'
 
-function Basket_header() {
+//Link заменить на div, если соответствовать требованиям дз
+
+function BasketHeader() {
   return (
     <header className={style['basket__header']}>
       <div className={style['basket__container']}>
@@ -15,4 +17,4 @@ function Basket_header() {
 
 }
 
-export default Basket_header;
+export default BasketHeader;

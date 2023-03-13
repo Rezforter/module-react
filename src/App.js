@@ -1,12 +1,12 @@
 import './App.css';
-import Pageproducts from './pages/products';
+import Products from './pages/products';
 import Basket from './pages/basket';
 
 function App() {
   return (
     <div className='App'>
-      {<Pageproducts />}
-      {/* {<Basket />} */}
+      {/* <Products /> */}
+      {<Basket />}
     </div>
   );
 }

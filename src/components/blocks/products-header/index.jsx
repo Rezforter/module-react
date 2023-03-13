@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import style from './header.module.css';
 
-function Header({productCount = 0, productPrice = 0}) {
+function ProductsHeader({productCount = 0, productPrice = 0}) {
  
  return (
    <header className={style['header']}>
@@ -25,4 +25,4 @@ function Header({productCount = 0, productPrice = 0}) {
   )
 }
 
-export default Header;
+export default ProductsHeader;

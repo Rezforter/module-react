@@ -1,6 +1,6 @@
 import './basket-card.css'
 
-function Basket_card({id, url, title, price}) {
+function BasketCard({id, url, title, price}) {
   console.log();
   return (
     <div className='basket__product'>
@@ -24,4 +24,4 @@ function Basket_card({id, url, title, price}) {
   )
 }
 
-export default Basket_card;
+export default BasketCard;

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Header from "../../components/blocks/products_header";
-import Products from "../../components/blocks/products_main";
+import ProductsHeader from "../../components/blocks/products-header";
+import ProductsMain from "../../components/blocks/products-main";
 
-function Pageproducts () {
+function Products () {
 
   const [productCount, setProductCount] = useState(0);
   const [productPrice, setProductPrice] = useState(0);
@@ -14,13 +14,13 @@ function Pageproducts () {
 
   return (
     <div className="page">
-      <Header 
+      <ProductsHeader 
         productCount={productCount} 
         productPrice={productPrice} 
       />
-      <Products handleState={handleSetValue}/>
+      <ProductsMain handleState={handleSetValue}/>
     </div>
   )
 }
 
-export default Pageproducts;
+export default Products;

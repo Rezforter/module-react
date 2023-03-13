@@ -1,10 +1,10 @@
-import { basket_products } from '../basket_main/basket_product';
-import style from './basket_footer.module.css'
+import { BasketProducts } from '../basket-main/basket-product';
+import style from './basket-footer.module.css'
 
-let price = basket_products.reduce((acc, item) => {
+let price = BasketProducts.reduce((acc, item) => {
   return acc + item.price;
 }, 0);
-function Basket_footer() {
+function BasketFooter() {
   return (
   <footer className={style['basket__footer']}>
     <div className={style['basket__container']}>
@@ -19,4 +19,4 @@ function Basket_footer() {
   )
 }
 
-export default Basket_footer;
+export default BasketFooter;
