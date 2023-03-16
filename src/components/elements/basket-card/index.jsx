@@ -1,12 +1,21 @@
+import { useDispatch } from 'react-redux';
+import { removeProductsBasket } from '../../../store/reducers/products';
 import './basket-card.css'
 
-function BasketCard({id, url, title, price}) {
-  console.log();
+
+function BasketCard({id, urlImg, title, price}) {
+
+  const dispatch = useDispatch()
+  
+  const removeProduct = () => {
+    dispatch(removeProductsBasket(id))
+  }
+
   return (
     <div className='basket__product'>
       <div className='basket__meal-name'>
         <div className='basket__product-img'>
-          <img src={url} width='122px' alt="product" />
+          <img src={urlImg} width='122px' alt="product" />
         </div>
         <p className='basket__description'>
           {title}
@@ -14,10 +23,10 @@ function BasketCard({id, url, title, price}) {
       </div>
       <div className='basket__leftbar'>
         <div className='basket__price'>
-          {price} ₽
+          {price.toLocaleString()} ₽
         </div>
         <div className='basket__xmark-container'>
-          <img className='basket__xmark' src="./img/xMark.svg" alt="xmark" />
+          <img className='basket__xmark' src="./img/xMark.svg" alt="xmark" onClick={removeProduct} />
         </div>
       </div>
     </div>

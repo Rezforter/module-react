@@ -1,9 +1,27 @@
 import './card.css' // импортирую css по разному для практики
 
+import { addProductsBasket } from '../../../store/reducers/products';
+import { useDispatch } from 'react-redux';
+import uuid from 'react-uuid';
+import { useState } from 'react';
+
+
 function Card({id, url, title, description, price, weight, changeState}) {
 
+  const dispatch = useDispatch()
   const handleClick = () => {
     changeState(price);
+  }
+
+  const addProduct = () => {
+    const item = {
+      id: id,
+      idx: uuid(),
+      title: title,
+      url: url,
+      price: price
+    }
+    dispatch(addProductsBasket(item))
   }
 
 	return (
@@ -15,7 +33,7 @@ function Card({id, url, title, description, price, weight, changeState}) {
       </div>
       <div className="card__bottom">
         <p className="card__price-weight">
-        {price} ₽ <span>/ {weight} г.</span>
+        {price.toLocaleString()} ₽ <span>/ {weight} г.</span>
         </p>
         <img className='card__add' src="./img/plus.svg" alt="plus" onClick={handleClick} />
       </div>

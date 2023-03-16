@@ -1,9 +1,17 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import style from './header.module.css';
 
+
+
 function ProductsHeader({productCount = 0, productPrice = 0}) {
- 
- return (
+/* function ProductsHeader() { */
+  
+  const products = useSelector(state => state.products.products)
+/*   const productCount = useSelector(state => state.products.countProduct)
+  const productPrice = useSelector(state => state.products.allPriceProductsBasket) */
+
+  return (
    <header className={style['header']}>
       <div className={style['container']}>
         <h1 className={style['header__title']}>НАША ПРОДУКЦИЯ</h1>
@@ -13,7 +21,7 @@ function ProductsHeader({productCount = 0, productPrice = 0}) {
               {productCount} товара
             </p>
             <p className={style['header__price']}>
-              на сумму {productPrice} ₽
+              на сумму {productPrice.toLocaleString()} ₽
             </p>
           </div>
           <Link className={style['header__img-container']} to={'/basket'}>
