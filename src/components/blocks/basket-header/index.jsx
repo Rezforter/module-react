@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import style from './basket-header.module.css'
 
-//Link заменить на div, если соответствовать требованиям дз
-
 function BasketHeader() {
   return (
     <header className={style['basket__header']}>

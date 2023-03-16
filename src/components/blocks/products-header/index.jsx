@@ -2,14 +2,28 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import style from './header.module.css';
 
+function lastTextSymbol (counter, wordArray) {
+  let subCounter = counter % 100;
+  counter = counter % 10;
 
+  if (subCounter > 10 && subCounter < 20) {
+    return wordArray[2];
+  }
+  if (counter == 1) {
+    return wordArray[0];
+  }
+  else if (counter > 1 && counter < 5) {
+    return wordArray[1];
+  }
+  return wordArray[2];
+}
 
-function ProductsHeader({productCount = 0, productPrice = 0}) {
-/* function ProductsHeader() { */
+function ProductsHeader() {
   
   const products = useSelector(state => state.products.products)
-/*   const productCount = useSelector(state => state.products.countProduct)
-  const productPrice = useSelector(state => state.products.allPriceProductsBasket) */
+  const productCount = useSelector(state => state.products.countProduct)
+  const productPrice = useSelector(state => state.products.allPriceProductsBasket)
+
 
   return (
    <header className={style['header']}>
@@ -18,7 +32,7 @@ function ProductsHeader({productCount = 0, productPrice = 0}) {
         <div className={style['header__cart']}>
           <div className={style['header__goods']}>
             <p className={style['header__number-of-goods']}>
-              {productCount} товара
+              {productCount} {lastTextSymbol(productCount, ["товар", "товара", "товаров"])}
             </p>
             <p className={style['header__price']}>
               на сумму {productPrice.toLocaleString()} ₽

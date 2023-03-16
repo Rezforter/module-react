@@ -3,15 +3,11 @@ import './card.css' // импортирую css по разному для пр�
 import { addProductsBasket } from '../../../store/reducers/products';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
-import { useState } from 'react';
 
 
-function Card({id, url, title, description, price, weight, changeState}) {
+function Card({id, url, title, description, price, weight}) {
 
   const dispatch = useDispatch()
-  const handleClick = () => {
-    changeState(price);
-  }
 
   const addProduct = () => {
     const item = {
@@ -35,7 +31,7 @@ function Card({id, url, title, description, price, weight, changeState}) {
         <p className="card__price-weight">
         {price.toLocaleString()} ₽ <span>/ {weight} г.</span>
         </p>
-        <img className='card__add' src="./img/plus.svg" alt="plus" onClick={handleClick} />
+        <img className='card__add' src="./img/plus.svg" alt="plus" onClick={addProduct} />
       </div>
     </div>
   )

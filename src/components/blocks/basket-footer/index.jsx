@@ -1,12 +1,15 @@
 import { useSelector } from 'react-redux';
-import { BasketProducts } from '../basket-main/basket-product';
 import style from './basket-footer.module.css'
 
-function BasketFooter() {
+function OrderCheck(price) {
+  if (price > 0) {
+    console.log('Заказ оформлен');
+  } else {
+    console.log('Ошибка');
+  }
+}
 
-  let price = BasketProducts.reduce((acc, item) => {
-    return acc + item.price;
-  }, 0);
+function BasketFooter() {
   
   const productsBasket = useSelector(state => state.products.basketProducts)
   const totalPrice = useSelector(state => state.products.allPriceProductsBasket)
@@ -15,10 +18,9 @@ function BasketFooter() {
   <footer className={style['basket__footer']}>
     <div className={style['basket__container']}>
       <p className={style['basket__order-price']}>
-        {/* Заказ на сумму: <span>{totalPrice.toLocaleString()} ₽</span> */}
-        Заказ на сумму: <span>{price.toLocaleString()} ₽</span>
+        Заказ на сумму: <span>{totalPrice.toLocaleString()} ₽</span>
       </p>
-      <button className={style['basket__button']}>
+      <button onClick={() => OrderCheck(totalPrice)} className={style['basket__button']}>
         Оформить заказ
       </button>
     </div>

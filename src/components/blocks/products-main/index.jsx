@@ -1,18 +1,10 @@
-/* import Card from './components/elements/card' */
 import { useSelector } from 'react-redux';
-import Card from '../../elements/card'
-import style from './products.module.css'
-/* import { products } from './products.js'; */
+import Card from '../../elements/card';
+import style from './products.module.css';
 
-
-function ProductsMain({handleState}) {
+function ProductsMain() {
 
   const products = useSelector(state => state.products.products)
-  
-  const changeState = (price) => {
-    handleState(prevcount => prevcount + 1, prevprice => prevprice + price);
-  }
-
 
   return (
     <main className={style['main']}>
@@ -27,7 +19,6 @@ function ProductsMain({handleState}) {
               description={item.description}
               price={item.price}
               weight={item.weight}
-              changeState={changeState}
             />
           )
         })}
