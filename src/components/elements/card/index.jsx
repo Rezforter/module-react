@@ -9,7 +9,8 @@ function Card({id, url, title, description, price, weight}) {
 
   const dispatch = useDispatch()
 
-  const addProduct = () => {
+  const addProduct = (elem) => {
+    elem.stopPropagation()
     const item = {
       id: id,
       idx: uuid(),
@@ -20,8 +21,12 @@ function Card({id, url, title, description, price, weight}) {
     dispatch(addProductsBasket(item))
   }
 
+  const linkProductDescription = () => {
+    console.log('12321');
+  } 
+
 	return (
-		<div className="card">
+		<div className="card" onClick={linkProductDescription}>
       <div className="card__main">
         <img className='card__picture' src={url} alt="picture" />
         <h1 className="card__title">{title}</h1>

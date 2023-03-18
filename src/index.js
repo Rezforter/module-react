@@ -6,8 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Products from './pages/products';
 import Basket from './pages/basket';
+import ProductDescription from './pages/productDescription';
 import { Provider } from 'react-redux';
 import { store } from './store';
+
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: '/basket',
     element: <Basket />
+  },
+  {
+    path: '/product/:id',
+    element: <ProductDescription />
   }
 ])
 
