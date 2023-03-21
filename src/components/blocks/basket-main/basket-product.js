@@ -1,4 +1,4 @@
-export const BasketProducts = [
+/* export const BasketProducts = [
   {
     id: 1,
     url: './img/products/1.png',
@@ -47,4 +47,4 @@ export const BasketProducts = [
     title: 'Устрицы по рокфеллеровски',
     price: 2700
   }
-]
+] */

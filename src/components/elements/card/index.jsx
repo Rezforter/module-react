@@ -3,11 +3,14 @@ import './card.css' // импортирую css по разному для пр�
 import { addProductsBasket } from '../../../store/reducers/products';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Card({id, url, title, description, price, weight}) {
 
-  const dispatch = useDispatch()
+  const openCard = useNavigate();
+  const dispatch = useDispatch();
 
   const addProduct = (elem) => {
     elem.stopPropagation()
@@ -22,7 +25,7 @@ function Card({id, url, title, description, price, weight}) {
   }
 
   const linkProductDescription = () => {
-    console.log('12321');
+    openCard(`/products/${id}`);
   } 
 
 	return (

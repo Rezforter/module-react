@@ -27,10 +27,17 @@ export const productsSlice = createSlice({
       state.allPriceProductsBasket = state.basketProducts.reduce((acc, current) => {
         return acc + current.price;
       }, 0)
+    },
+    clearProductsBasket: (state) => {
+      state.basketProducts = [];
+      state.countProduct = state.basketProducts.length;
+      state.allPriceProductsBasket = state.basketProducts.reduce((acc, current) => {
+        return acc + current.price;
+      }, 0)
     }
   }
 })
 
-export const { addProductsBasket, removeProductsBasket } = productsSlice.actions
+export const { addProductsBasket, removeProductsBasket, clearProductsBasket } = productsSlice.actions
 
 export default productsSlice.reducer

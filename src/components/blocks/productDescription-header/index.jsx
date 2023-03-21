@@ -1,10 +1,9 @@
-import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
 import { activeUserDataKey } from '../../../pages/authRegForm';
-import style from './header.module.css';
+import style from './productDescription-header.module.css'
 import { useDispatch } from 'react-redux';
 import { clearProductsBasket } from '../../../store/reducers/products';
-
 
 function lastTextSymbol (counter, wordArray) {
   let subCounter = counter % 100;
@@ -22,15 +21,14 @@ function lastTextSymbol (counter, wordArray) {
   return wordArray[2];
 }
 
-function ProductsHeader() {
+function ProductDescriptionHeader() {
   
   const products = useSelector(state => state.products.products)
   const productCount = useSelector(state => state.products.countProduct)
-
   const productPrice = useSelector(state => state.products.allPriceProductsBasket)
-  
-  const backToAuth = useNavigate();
 
+  const backToAuth = useNavigate();
+  
   const dispatch = useDispatch()
 
   const linkToAuth = () => {
@@ -39,11 +37,12 @@ function ProductsHeader() {
     backToAuth(`/`);
   }
 
-
   return (
    <header className={style['header']}>
       <div className={style['container']}>
-        <h1 className={style['header__title']}>НАША ПРОДУКЦИЯ</h1>
+        <Link className={style['header__products-img-container']} to={'/products'}>
+          <img className={style['header__img']} src="../img/backArrow.svg" alt="photo" />
+        </Link>
         <div className={style['header__cart']}>
           <div className={style['header__goods']}>
             <p className={style['header__number-of-goods']}>
@@ -54,7 +53,7 @@ function ProductsHeader() {
             </p>
           </div>
           <Link className={style['header__img-container']} to={'/basket'}>
-            <img className={style['header__img']} src="./img/Group 71.svg" alt="photo" />
+            <img className={style['header__img']} src="../img/Group 71.svg" alt="photo" />
           </Link>
           <button onClick={linkToAuth} className={style['header__button']}>
             Выйти
@@ -65,4 +64,4 @@ function ProductsHeader() {
   )
 }
 
-export default ProductsHeader;
+export default ProductDescriptionHeader;

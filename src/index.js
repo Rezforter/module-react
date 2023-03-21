@@ -9,11 +9,18 @@ import Basket from './pages/basket';
 import ProductDescription from './pages/productDescription';
 import { Provider } from 'react-redux';
 import { store } from './store';
+import RegAuthForm from './pages/regAuthForm';
+import AuthRegForm, { activeUserDataKey } from './pages/authRegForm';
 
+//заблокировать доступ, если не авторизован
 
 const router = createBrowserRouter([
   {
     path: '/',
+    element: <AuthRegForm />
+  },
+  {
+    path: '/products',
     element: <Products />
   },
   {
@@ -21,7 +28,7 @@ const router = createBrowserRouter([
     element: <Basket />
   },
   {
-    path: '/product/:id',
+    path: '/products/:productId',
     element: <ProductDescription />
   }
 ])
