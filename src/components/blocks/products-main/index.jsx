@@ -11,7 +11,7 @@ function ProductsMain() {
       <div className={style['container']}>
         {products.map(item => {
           return (
-            <Card 
+            <Card
               key={item.id}
               id={item.id}
               url={item.url}

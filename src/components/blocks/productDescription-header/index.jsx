@@ -5,7 +5,7 @@ import style from './productDescription-header.module.css'
 import { useDispatch } from 'react-redux';
 import { clearProductsBasket } from '../../../store/reducers/products';
 
-function lastTextSymbol (counter, wordArray) {
+function lastTextSymbol(counter, wordArray) {
   let subCounter = counter % 100;
   counter = counter % 10;
 
@@ -22,13 +22,12 @@ function lastTextSymbol (counter, wordArray) {
 }
 
 function ProductDescriptionHeader() {
-  
-  const products = useSelector(state => state.products.products)
+
   const productCount = useSelector(state => state.products.countProduct)
   const productPrice = useSelector(state => state.products.allPriceProductsBasket)
 
   const backToAuth = useNavigate();
-  
+
   const dispatch = useDispatch()
 
   const linkToAuth = () => {
@@ -38,7 +37,7 @@ function ProductDescriptionHeader() {
   }
 
   return (
-   <header className={style['header']}>
+    <header className={style['header']}>
       <div className={style['container']}>
         <Link className={style['header__products-img-container']} to={'/products'}>
           <img className={style['header__img']} src="../img/backArrow.svg" alt="photo" />

@@ -5,7 +5,7 @@ import NotAuth from "../NotAuth";
 import { activeUserDataKey } from "../authRegForm";
 
 function Basket() {
-  if(localStorage.getItem(activeUserDataKey)) {
+  if (localStorage.getItem(activeUserDataKey)) {
     return (
       <div className="basket">
         <BasketHeader />

@@ -3,10 +3,10 @@ import ProductsMain from "../../components/blocks/products-main";
 import { activeUserDataKey } from "../authRegForm";
 import NotAuth from "../NotAuth";
 
-function Products () {
-  if(localStorage.getItem(activeUserDataKey)) {
+function Products() {
+  if (localStorage.getItem(activeUserDataKey)) {
     return (
-      <div className="page">
+      <div className="page" style={{backgroundColor: '#161516'}}>
         <ProductsHeader />
         <ProductsMain />
       </div>

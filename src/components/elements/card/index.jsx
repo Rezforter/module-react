@@ -1,13 +1,12 @@
 import './card.css' // импортирую css по разному для практики
 
-import { addProductsBasket } from '../../../store/reducers/products';
+import { addProductsBasket, removeProductsBasket } from '../../../store/reducers/products';
 import { useDispatch } from 'react-redux';
 import uuid from 'react-uuid';
 import { useNavigate } from 'react-router-dom';
 
 
-
-function Card({id, url, title, description, price, weight}) {
+function Card({ id, url, title, description, price, weight }) {
 
   const openCard = useNavigate();
   const dispatch = useDispatch();
@@ -26,10 +25,10 @@ function Card({id, url, title, description, price, weight}) {
 
   const linkProductDescription = () => {
     openCard(`/products/${id}`);
-  } 
+  }
 
-	return (
-		<div className="card" onClick={linkProductDescription}>
+  return (
+    <div className="card" onClick={linkProductDescription}>
       <div className="card__main">
         <img className='card__picture' src={url} alt="picture" />
         <h1 className="card__title">{title}</h1>
@@ -37,9 +36,9 @@ function Card({id, url, title, description, price, weight}) {
       </div>
       <div className="card__bottom">
         <p className="card__price-weight">
-        {price.toLocaleString()} ₽ <span>/ {weight} г.</span>
+          {price.toLocaleString()} ₽ <span>/ {weight} г.</span>
         </p>
-        <img className='card__add' src="./img/plus.svg" alt="plus" onClick={addProduct} />
+        <img className='card__add' src={`./img/plus.svg`} alt="plus" onClick={addProduct} />
       </div>
     </div>
   )

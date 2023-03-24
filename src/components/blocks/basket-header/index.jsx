@@ -20,18 +20,17 @@ function BasketHeader() {
     <header className={style['basket__header']}>
       <div className={style['basket__container']}>
         <div className={style['basket__left-side']}>
-          <Link className={style['basket__back']} to={'/products'}>
+          <Link className={style['basket__back']} to={-1}>
             <img className={style['basket__back-img']} src="./img/backArrow.svg" alt="" />
           </Link>
           <h1 className={style['basket__title']}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
         </div>
         <button onClick={linkToAuth} className={style['basket__header-button']}>
-            Выйти
+          Выйти
         </button>
       </div>
     </header>
   )
-
 }
 
 export default BasketHeader;

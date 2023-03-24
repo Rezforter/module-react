@@ -23,7 +23,7 @@ function NotAuth() {
         <button onClick={linkToAuth} className={style['warning__button']}>Вернуться на страницу авторизации</button>
       </div>
     </div>
-  )  
+  )
 }
 
 export default NotAuth;

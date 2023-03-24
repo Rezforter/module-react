@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { clearProductsBasket } from '../../../store/reducers/products';
 
 
-function lastTextSymbol (counter, wordArray) {
+function lastTextSymbol(counter, wordArray) {
   let subCounter = counter % 100;
   counter = counter % 10;
 
@@ -23,15 +23,15 @@ function lastTextSymbol (counter, wordArray) {
 }
 
 function ProductsHeader() {
-  
+
   const products = useSelector(state => state.products.products)
   const productCount = useSelector(state => state.products.countProduct)
 
   const productPrice = useSelector(state => state.products.allPriceProductsBasket)
-  
+
   const backToAuth = useNavigate();
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const linkToAuth = () => {
     dispatch(clearProductsBasket());
@@ -39,9 +39,8 @@ function ProductsHeader() {
     backToAuth(`/`);
   }
 
-
   return (
-   <header className={style['header']}>
+    <header className={style['header']}>
       <div className={style['container']}>
         <h1 className={style['header__title']}>НАША ПРОДУКЦИЯ</h1>
         <div className={style['header__cart']}>

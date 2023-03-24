@@ -1,11 +1,9 @@
-import { useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addProductsBasket } from '../../../store/reducers/products';
 import uuid from 'react-uuid';
 import style from './productDescription-main.module.css'
 
-function ProductDescriptionMain({id, urlImg, title, fullDescription, price, weight}) {
+function ProductDescriptionMain({ id, urlImg, title, fullDescription, price, weight }) {
 
   const dispatch = useDispatch();
 
@@ -25,7 +23,7 @@ function ProductDescriptionMain({id, urlImg, title, fullDescription, price, weig
     <main className={style['productDesc']}>
       <div className={style['container']}>
         <div className={style['productDesc__img']}>
-          <img src={'.' + urlImg} alt="product-image" width='501px'/>
+          <img src={'.' + urlImg} alt="product-image" width='501px' />
         </div>
         <section className={style['productDesc__info']}>
           <h1 className={style['productDesc__title']}>
@@ -36,7 +34,7 @@ function ProductDescriptionMain({id, urlImg, title, fullDescription, price, weig
           </p>
           <div className={style['productDesc__commercial']}>
             <p className={style['productDesc__price']}>
-            {price.toLocaleString()} ₽ <span>/ {weight} г.</span>
+              {price.toLocaleString()} ₽ <span>/ {weight} г.</span>
             </p>
             <button onClick={addProduct} className={style['productDesc__toBasket']}>
               В корзину

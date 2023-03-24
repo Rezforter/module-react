@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux';
 function BasketMain() {
   const productsBasket = useSelector(state => state.products.basketProducts)
   return (
-  <main className={style['basket__main']}>
-    <div className={style['basket__container']}>
-      {productsBasket.map(item => {
+    <main className={style['basket__main']}>
+      <div className={style['basket__container']}>
+        {productsBasket.map(item => {
           return (
-            <BasketCard 
+            <BasketCard
               key={item.idx}
               id={item.idx}
               urlImg={item.url}
@@ -17,9 +17,9 @@ function BasketMain() {
               price={item.price}
             />
           )
-      })}
-    </div>
-  </main>
+        })}
+      </div>
+    </main>
   )
 }
 

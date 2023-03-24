@@ -10,14 +10,13 @@ function ProductDescription() {
 
   const products = useSelector(state => state.products.products);
   const { productId } = useParams();
-  console.log(productId);
-  if(localStorage.getItem(activeUserDataKey)) {
+  if (localStorage.getItem(activeUserDataKey)) {
     return (
       <div className={style['productDescription']}>
         <ProductDescriptionHeader />
         {
           products.filter((product) => product.id == productId).map((product) => (
-            <ProductDescriptionMain 
+            <ProductDescriptionMain
               key={product.id}
               id={product.id}
               urlImg={product.url}

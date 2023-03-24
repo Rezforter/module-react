@@ -3,11 +3,12 @@ import { removeProductsBasket } from '../../../store/reducers/products';
 import './basket-card.css'
 
 
-function BasketCard({id, urlImg, title, price}) {
+function BasketCard({ id, urlImg, title, price }) {
 
   const dispatch = useDispatch()
-  
+
   const removeProduct = () => {
+    console.log(id);
     dispatch(removeProductsBasket(id))
   }
 
