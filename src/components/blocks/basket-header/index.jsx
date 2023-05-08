@@ -21,7 +21,7 @@ function BasketHeader() {
       <div className={style['basket__container']}>
         <div className={style['basket__left-side']}>
           <Link className={style['basket__back']} to={-1}>
-            <img className={style['basket__back-img']} src="./img/backArrow.svg" alt="" />
+            <img className={style['basket__back-img']} src="./img/backArrow.svg" alt="back" />
           </Link>
           <h1 className={style['basket__title']}>КОРЗИНА С ВЫБРАННЫМИ ТОВАРАМИ</h1>
         </div>
