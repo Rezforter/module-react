@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./module-react/static/css/main.0e293bff.css",
-    "main.js": "./module-react/static/js/main.be53f998.js",
-    "static/js/787.a878762a.chunk.js": "./module-react/static/js/787.a878762a.chunk.js",
-    "static/media/background.png": "./module-react/static/media/background.3c2663373ad5414c76d7.png",
-    "static/media/bg_product_info.png": "./module-react/static/media/bg_product_info.e4f1acdd56451cdd6b81.png",
-    "index.html": "./module-react/index.html",
-    "main.0e293bff.css.map": "./module-react/static/css/main.0e293bff.css.map",
-    "main.be53f998.js.map": "./module-react/static/js/main.be53f998.js.map",
-    "787.a878762a.chunk.js.map": "./module-react/static/js/787.a878762a.chunk.js.map"
+    "main.css": "/module-react/static/css/main.0e293bff.css",
+    "main.js": "/module-react/static/js/main.be53f998.js",
+    "static/js/787.a878762a.chunk.js": "/module-react/static/js/787.a878762a.chunk.js",
+    "static/media/background.png": "/module-react/static/media/background.3c2663373ad5414c76d7.png",
+    "static/media/bg_product_info.png": "/module-react/static/media/bg_product_info.e4f1acdd56451cdd6b81.png",
+    "index.html": "/module-react/index.html",
+    "main.0e293bff.css.map": "/module-react/static/css/main.0e293bff.css.map",
+    "main.be53f998.js.map": "/module-react/static/js/main.be53f998.js.map",
+    "787.a878762a.chunk.js.map": "/module-react/static/js/787.a878762a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e293bff.css",
