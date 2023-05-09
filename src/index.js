@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, HashRouter } from 'react-router-dom';
 import Products from './pages/products';
 import Basket from './pages/basket';
 import ProductDescription from './pages/productDescription';
