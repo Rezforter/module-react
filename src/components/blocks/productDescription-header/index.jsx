@@ -40,7 +40,7 @@ function ProductDescriptionHeader() {
     <header className={style['header']}>
       <div className={style['container']}>
         <Link className={style['header__products-img-container']} to={'/products'}>
-          <img className={style['header__img']} src="../img/backArrow.svg" alt="photo" />
+          <img className={style['header__img']} src="./img/backArrow.svg" alt="photo" />
         </Link>
         <div className={style['header__cart']}>
           <div className={style['header__goods']}>
@@ -52,7 +52,7 @@ function ProductDescriptionHeader() {
             </p>
           </div>
           <Link className={style['header__img-container']} to={'/basket'}>
-            <img className={style['header__img']} src="../img/Group 71.svg" alt="photo" />
+            <img className={style['header__img']} src="./img/Group 71.svg" alt="photo" />
           </Link>
           <button onClick={linkToAuth} className={style['header__button']}>
             Выйти
