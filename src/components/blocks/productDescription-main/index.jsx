@@ -23,7 +23,7 @@ function ProductDescriptionMain({ id, urlImg, title, fullDescription, price, wei
     <main className={style['productDesc']}>
       <div className={style['container']}>
         <div className={style['productDesc__img']}>
-          <img src={'./module-react/' + urlImg} alt="product-image" width='501px' />
+          <img src={'./' + urlImg} alt="product-image" width='501px' />
         </div>
         <section className={style['productDesc__info']}>
           <h1 className={style['productDesc__title']}>
